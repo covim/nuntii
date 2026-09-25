@@ -1,0 +1,31 @@
+# License policy: only permissive licenses so nuntii can be used and distributed commercially
+# without copyleft obligations. Run `cargo deny check licenses`.
+[graph]
+all-features = false
+
+[licenses]
+confidence-threshold = 0.9
+allow = [
+    "MIT",
+    "MIT-0",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Zlib",
+    "0BSD",
+    "Unicode-3.0",
+    "CC0-1.0",
+    "BSL-1.0",
+    # File-level copyleft only (e.g. transitive deps of Tauri); no obligations for our own code.
+    "MPL-2.0",
+    "CDLA-Permissive-2.0",
+]
+
+[bans]
+multiple-versions = "allow"
+
+# Our own crate is proprietary/unpublished.
+[licenses.private]
+ignore = true

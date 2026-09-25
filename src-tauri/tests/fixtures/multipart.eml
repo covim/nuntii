@@ -1,0 +1,39 @@
+From: Anna Beispiel <anna@example.de>
+To: bob@example.com
+Subject: Angebot
+Date: Wed, 2 Sep 2026 09:30:00 +0200
+Message-ID: <m1@example.de>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="outer"
+
+--outer
+Content-Type: multipart/related; boundary="rel"
+
+--rel
+Content-Type: multipart/alternative; boundary="alt"
+
+--alt
+Content-Type: text/plain; charset=utf-8
+
+Hallo Bob,
+anbei das Angebot.
+--alt
+Content-Type: text/html; charset=utf-8
+
+<p>Hallo Bob,<br>anbei das <b>Angebot</b>.</p><img src="cid:logo@nuntii"><img src="https://tracker.example/p.gif">
+--alt--
+--rel
+Content-Type: image/png
+Content-ID: <logo@nuntii>
+Content-Disposition: inline
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgo=
+--rel--
+--outer
+Content-Type: application/pdf; name="angebot.pdf"
+Content-Disposition: attachment; filename="angebot.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQgdGVzdA==
+--outer--
