@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklärung – nuntii</title>
+  <meta name="description" content="Datenschutzerklärung für den Desktop-Mailclient nuntii.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="logo.svg" alt="">nuntii</a>
+      <nav class="site">
+        <a href="./">Start</a>
+        <a href="privacy.html" aria-current="page">Datenschutz</a>
+        <a href="terms.html">Nutzungsbedingungen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article>
+      <h1>Datenschutzerklärung</h1>
+      <p class="stand">Stand: 26. September 2026</p>
+
+      <div class="note">
+        <strong>Kurzfassung:</strong> nuntii ist eine Desktop-Anwendung, die ausschließlich auf Ihrem Gerät läuft.
+        Es gibt keinen nuntii-Server. Ihre E-Mails, Kontodaten und Zugangsdaten werden nur lokal gespeichert und
+        nur direkt zwischen Ihrem Gerät und Ihren E-Mail-Anbietern (z. B. Google oder Ihrem eigenen Mailserver)
+        übertragen. Der Entwickler erhält keinerlei Daten von Ihnen.
+      </div>
+
+      <h2>1. Verantwortlicher und Kontakt</h2>
+      <p>
+        Matthias Covi-Reuthe<br>
+        [Anschrift ergänzen]<br>
+        E-Mail: <a href="mailto:matthias.covi.reuthe@gmail.com">matthias.covi.reuthe@gmail.com</a>
+      </p>
+
+      <h2>2. Grundprinzip: lokale Verarbeitung</h2>
+      <p>
+        nuntii verarbeitet Ihre Daten ausschließlich auf dem Gerät, auf dem Sie die Anwendung installiert haben.
+        Der Entwickler betreibt keine Server, über die Ihre Daten laufen, und hat keinen Zugriff auf Ihre E-Mails,
+        Kontakte oder Zugangsdaten. Es findet keine Analyse, kein Tracking, keine Telemetrie und keine Werbung statt.
+      </p>
+
+      <h2>3. Welche Daten nuntii verarbeitet</h2>
+      <ul>
+        <li><strong>Kontodaten:</strong> E-Mail-Adresse, Benutzername, Kontoname, Absendername, Server-Einstellungen (IMAP/SMTP).</li>
+        <li><strong>E-Mail-Inhalte:</strong> Kopfzeilen (Absender, Empfänger, Betreff, Datum), Nachrichtentexte und Anhänge der synchronisierten Ordner.</li>
+        <li><strong>Entwürfe, Signaturen und Einstellungen</strong>, die Sie in der App anlegen.</li>
+        <li><strong>Zugangsdaten:</strong> Passwörter von IMAP-Konten sowie OAuth-Tokens für Gmail.</li>
+      </ul>
+
+      <h2>4. Speicherung auf Ihrem Gerät</h2>
+      <ul>
+        <li>E-Mails, Anhänge, Entwürfe und Einstellungen werden in einer lokalen Datenbank und einem lokalen Suchindex im Anwendungsdatenverzeichnis Ihres Benutzerkontos gespeichert (unter Windows z. B. <code>%APPDATA%\app.nuntii.desktop</code>).</li>
+        <li>Passwörter und OAuth-Tokens werden ausschließlich im Schlüsselbund Ihres Betriebssystems abgelegt (Windows-Anmeldeinformationsverwaltung, macOS-Schlüsselbund bzw. Linux Secret Service) – niemals im Klartext in Dateien oder in der Datenbank.</li>
+        <li>Alle Verbindungen zu Mailservern und zu Google erfolgen verschlüsselt (TLS).</li>
+      </ul>
+
+      <h2>5. Zugriff auf Google-Nutzerdaten (Gmail)</h2>
+      <p>Wenn Sie ein Gmail-Konto verbinden, fordert nuntii über Googles OAuth-Verfahren folgende Berechtigungen an:</p>
+      <ul>
+        <li><code>https://mail.google.com/</code> – Lesen, Senden, Verschieben und Löschen Ihrer E-Mails über IMAP und SMTP. Diese Berechtigung ist erforderlich, weil nuntii als vollwertiger E-Mail-Client auf das Postfach zugreift.</li>
+        <li><code>openid</code> und <code>email</code> – um die E-Mail-Adresse des angemeldeten Google-Kontos zu ermitteln und das Konto in der App zuzuordnen.</li>
+      </ul>
+      <p>
+        <strong>Verwendung:</strong> Die Daten werden ausschließlich verwendet, um Ihnen die Funktionen eines E-Mail-Clients
+        bereitzustellen: E-Mails abrufen, anzeigen, lokal durchsuchen, organisieren, beantworten und in Ihrem Namen senden –
+        jeweils auf Ihre Veranlassung. Die Übertragung erfolgt direkt zwischen Ihrem Gerät und Google.
+      </p>
+      <p><strong>nuntii</strong></p>
+      <ul>
+        <li>überträgt Google-Nutzerdaten weder an den Entwickler noch an sonstige Dritte,</li>
+        <li>verkauft keine Daten und nutzt sie nicht für Werbung,</li>
+        <li>verwendet sie nicht zur Bonitätsprüfung oder für Kreditzwecke,</li>
+        <li>verwendet sie nicht zum Trainieren von KI- oder Machine-Learning-Modellen,</li>
+        <li>lässt keine Menschen Ihre Daten lesen.</li>
+      </ul>
+      <p>
+        Die Nutzung und Weitergabe von Informationen, die nuntii von Google-APIs erhält, entspricht der
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+        einschließlich der Anforderungen zur eingeschränkten Nutzung (Limited Use).
+      </p>
+
+      <h2>6. Verbindungen zu Dritten</h2>
+      <p>nuntii baut nur folgende Verbindungen auf:</p>
+      <ul>
+        <li>zu den von Ihnen eingerichteten Mailservern (IMAP/SMTP), z. B. Ihrem Synology-Server oder <code>imap.gmail.com</code> / <code>smtp.gmail.com</code>,</li>
+        <li>zu Google (<code>accounts.google.com</code>, <code>oauth2.googleapis.com</code>, <code>openidconnect.googleapis.com</code>) für Anmeldung und Token-Erneuerung bei Gmail-Konten,</li>
+        <li>zu externen Servern, wenn Sie in einer E-Mail das Laden externer Bilder ausdrücklich erlauben. Dabei erhält der jeweilige Server Ihre IP-Adresse; standardmäßig ist das blockiert,</li>
+        <li>Links aus E-Mails öffnen sich in Ihrem Standardbrowser.</li>
+      </ul>
+      <p>Für die Verarbeitung durch Ihre E-Mail-Anbieter gelten deren Datenschutzbestimmungen, bei Google die <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>.</p>
+
+      <h2>7. Speicherdauer und Löschung</h2>
+      <ul>
+        <li>Lokale Daten bleiben gespeichert, bis Sie sie löschen.</li>
+        <li>Entfernen Sie ein Konto in den Einstellungen, werden alle lokal gespeicherten Mails dieses Kontos sowie die zugehörigen Zugangsdaten im Schlüsselbund gelöscht.</li>
+        <li>Nach einer Deinstallation können Sie verbliebene Daten entfernen, indem Sie das oben genannte Anwendungsdatenverzeichnis löschen.</li>
+        <li>Den Zugriff von nuntii auf Ihr Google-Konto können Sie jederzeit unter <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> widerrufen.</li>
+      </ul>
+
+      <h2>8. Ihre Rechte</h2>
+      <p>
+        Da der Entwickler keine personenbezogenen Daten von Ihnen erhält oder speichert, liegen alle Daten unter Ihrer
+        eigenen Kontrolle auf Ihrem Gerät. Unabhängig davon haben Sie nach der DSGVO das Recht auf Auskunft,
+        Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Wenden Sie sich dazu
+        an die oben genannte Kontaktadresse. Sie haben außerdem das Recht auf Beschwerde bei einer Aufsichtsbehörde,
+        in Österreich bei der <a href="https://www.dsb.gv.at/">Datenschutzbehörde</a>.
+      </p>
+
+      <h2>9. Diese Website</h2>
+      <p>
+        Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf verarbeitet GitHub technisch notwendige Daten
+        (z. B. IP-Adresse) gemäß der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">GitHub-Datenschutzerklärung</a>.
+        Die Website selbst setzt keine Cookies und verwendet keine Analysedienste.
+      </p>
+
+      <h2>10. Änderungen</h2>
+      <p>Diese Datenschutzerklärung wird angepasst, wenn sich die Funktionen von nuntii ändern. Es gilt die jeweils hier veröffentlichte Fassung.</p>
+    </article>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>© 2026 Matthias Covi-Reuthe</span>
+      <span><a href="./">Start</a> · <a href="terms.html">Nutzungsbedingungen</a></span>
+    </div>
+  </footer>
+</body>
+</html>

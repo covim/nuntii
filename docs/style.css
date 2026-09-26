@@ -1,0 +1,69 @@
+:root {
+  --bg: #ffffff;
+  --fg: #16181d;
+  --muted: #5b6270;
+  --card: #f5f7fb;
+  --border: #e3e7ef;
+  --accent: #2563eb;
+  --accent-2: #4f46e5;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1117;
+    --fg: #e8eaf0;
+    --muted: #9aa3b2;
+    --card: #171a23;
+    --border: #262b37;
+    --accent: #60a5fa;
+    --accent-2: #818cf8;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+header.site {
+  border-bottom: 1px solid var(--border);
+}
+header.site .wrap {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  height: 64px;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font-weight: 650; font-size: 19px; }
+.brand img { width: 30px; height: 30px; }
+nav.site { display: flex; gap: 18px; font-size: 15px; flex-wrap: wrap; }
+nav.site a { color: var(--muted); text-decoration: none; }
+nav.site a:hover, nav.site a[aria-current] { color: var(--fg); }
+
+.hero { padding: 64px 0 40px; text-align: center; }
+.hero img { width: 96px; height: 96px; }
+.hero h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; margin: 20px 0 12px; letter-spacing: -0.02em; }
+.hero p { color: var(--muted); font-size: 19px; max-width: 620px; margin: 0 auto; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 24px 0 48px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+article { padding: 40px 0 56px; }
+article h1 { font-size: 34px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+article .stand { color: var(--muted); margin: 0 0 28px; }
+article h2 { font-size: 21px; margin: 34px 0 8px; }
+article h3 { font-size: 17px; margin: 22px 0 6px; }
+article ul { padding-left: 22px; }
+article li { margin: 4px 0; }
+.note { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent-2); border-radius: 10px; padding: 14px 18px; margin: 20px 0; }
+code { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; font-size: 0.9em; overflow-wrap: anywhere; }
+
+footer.site { border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+footer.site .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-top: 20px; padding-bottom: 28px; }
+footer.site a { color: var(--muted); }
